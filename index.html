@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>mconley's Community-building Tips</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+  <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/mozilla-sandstone-nightly.css">
+  <link rel="stylesheet" media="screen" href="themes/style/custom.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+
+  <div class="deck-container">
+    <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
+
+    <section class="slide">
+      <p><a href="#" id="toggle-fullscreen">Toggle fullscreen</a></p>
+    </section>
+
+    <section class="slide">
+      <h1>Community-building Tips</h1>
+    </section>
+
+    <section class="slide">
+      <h1>X-Bugzilla-Mentors</h1>
+    </section>
+
+    <section class="slide">
+      <h2>Engaging someone with an unknown skillset...</h2>
+      <ul>
+        <li class="slide">Be gentle. Probe sensitively.</li>
+        <li class="slide">Assume they're starting from zero, but be ready to ramp up if they show they've got a greater understanding.</li>
+        <li class="slide">Assume positive intent! They're nervous and want to be cool. So did you.</li>
+        <li class="slide">Be available. Yes, point to documentation, but also leave yourself available for questions.
+          <p class="slide">
+            "Here - this should tell you everything you need to know" is not as good as...
+          </p>
+          <p class="slide">
+            "Check this out - let me know if you have any questions!"
+          </p>
+        </li>
+        <li class="slide">Ask questions - be curious about how they're doing, and if they're having fun.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Hand-hold, but then start to release...</h2>
+      <ul>
+        <li class="slide">After their first patch, point them to a new one!</li>
+        <li class="slide">Get them connected with other mentors as well, so they have multiple connections</li>
+        <li class="slide">If possible, get them into IRC and talking to the team - not just PM'ing you</li>
+        <li class="slide">Praise them and thank them! THEY ARE AWESOME.</li>
+        <li class="slide">Badges are remarkably effective! So is public praise - though perhaps emphasize praising the work they've done rather than the contributor directly to avoid possibly embarassing them.</li>
+        <li class="slide">Find out what they want to do, and help them get there. Introduce them to the right people.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>When a contributor is off in the weeds...</h2>
+      <ul>
+        <li class="slide">In my experience, they usually know it.</li>
+        <li class="slide">It's possible that the bug they're working on isn't as interesting as they originally thought. Try offering alternatives?</li>
+        <li class="slide">Help them break problems down into smaller pieces.</li>
+        <li class="slide">Poorly spec'd solutions can be heartbreaking. Be truly confident when you send a contributor down a path - or at least warn them early if you're not 100% confident.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>They belong.</h1>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $("#toggle-fullscreen").click(function() {
+      if (!document.mozFullScreenElement) {
+        document.documentElement.mozRequestFullScreen();
+      } else {
+        document.mozCancelFullScreen();
+      }
+    });
+
+    $.deck('.slide');
+  });
+
+</script>
+</body>
+</html>
