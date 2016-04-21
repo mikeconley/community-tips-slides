@@ -34,62 +34,84 @@
 <body>
 
   <div class="deck-container">
-    <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
-
     <section class="slide">
-      <p><a href="#" id="toggle-fullscreen">Toggle fullscreen</a></p>
+      <h1>How to Seem Human on the Web</h1>
     </section>
 
     <section class="slide">
-      <h1>Community-building Tips</h1>
+      <h1>There are LOTS of projects on the web</h1>
     </section>
 
     <section class="slide">
-      <h1>X-Bugzilla-Mentors</h1>
+      <h1>Why will someone approach yours?</h1>
     </section>
 
     <section class="slide">
-      <h2>Engaging someone with an unknown skillset...</h2>
+      <h2>Your project needs to be welcoming</h2>
       <ul>
-        <li class="slide">Be gentle. Probe sensitively.</li>
-        <li class="slide">Assume they're starting from zero, but be ready to ramp up if they show they've got a greater understanding.</li>
-        <li class="slide">Assume positive intent! They're nervous and want to be cool. So did you.</li>
-        <li class="slide">Be available. Yes, point to documentation, but also leave yourself available for questions.
-          <p class="slide">
-            "Here - this should tell you everything you need to know" is not as good as...
-          </p>
-          <p class="slide">
-            "Check this out - let me know if you have any questions!"
-          </p>
-        </li>
-        <li class="slide">Ask questions - be curious about how they're doing, and if they're having fun.</li>
+        <li class="slide">A good README! What is this thing? What is its purpose?</li>
+        <li class="slide">Up to date documentation on how to get started</li>
+        <li class="slide">A list of introductory, mentored work that people can do</li>
+        <li class="slide">Communications channels for people to get help from</li>
+        <li class="slide">Mentors, who can build mentors, who can build mentors</li>
       </ul>
     </section>
 
     <section class="slide">
-      <h2>Hand-hold, but then start to release...</h2>
+      <h1>It's more than documents though</h1>
+    </section>
+
+    <section class="slide">
+      <h1>Imagine a school cafeteria...</h1>
+    </section>
+
+    <section class="slide">
+      <h1>You are the Cool Kids Table</h1>
+    </section>
+
+    <section class="slide">
+      <h1>Signage helps but isn't everything</h1>
+    </section>
+
+    <section class="slide">
+      <h2>Your project needs to be <strong>human</strong></h2>
       <ul>
-        <li class="slide">After their first patch, point them to a new one!</li>
-        <li class="slide">Get them connected with other mentors as well, so they have multiple connections</li>
-        <li class="slide">If possible, get them into IRC and talking to the team - not just PM'ing you</li>
-        <li class="slide">Praise them and thank them! THEY ARE AWESOME.</li>
-        <li class="slide">Badges are remarkably effective! So is public praise - though perhaps emphasize praising the work they've done rather than the contributor directly to avoid possibly embarassing them.</li>
-        <li class="slide">Find out what they want to do, and help them get there. Introduce them to the right people.</li>
+        <li class="slide">People want to be cool. It’s scary to approach a new table and just dive in right away and get involved in a community because: “They might think I’m dumb”, “They might think I’m not cool”, “They might not like me"</li>
+        <li class="slide">Show people how you make mistakes. These are golden opportunities for humanizing yourself</li>
+        <li class="slide">Show yourself struggling. Show yourself failing</li>
+        <li class="slide">This is the soft underbelly that is approachable and human</li>
       </ul>
     </section>
 
     <section class="slide">
-      <h2>When a contributor is off in the weeds...</h2>
+      <h2>Practical ways to humanize yourself</h2>
       <ul>
-        <li class="slide">In my experience, they usually know it.</li>
-        <li class="slide">It's possible that the bug they're working on isn't as interesting as they originally thought. Try offering alternatives?</li>
-        <li class="slide">Help them break problems down into smaller pieces.</li>
-        <li class="slide">Poorly spec'd solutions can be heartbreaking. Be truly confident when you send a contributor down a path - or at least warn them early if you're not 100% confident.</li>
+        <li class="slide">I livehack. I stumble and fall regularly. I get into trouble</li>
+        <li class="slide">Blog about what you're doing, the pitfalls you're hitting, and what's not working along with what is</li>
+        <li class="slide"><a href="http://people.mozilla.org/~mconley2/bugnotes" target="_blank">Publish your notes if you have any</a>. Show them how you try things and are wrong, and then how you find success!</li>
+        <li class="slide">Podcasting?</li>
       </ul>
     </section>
 
     <section class="slide">
-      <h1>They belong.</h1>
+      <h2>Not knowing is okay</h2>
+      <ul>
+        <li class="slide">Try to create a culture where saying "I don't know" is an opportunity to find things out</li>
+        <li class="slide"><img src="ten_thousand.png" alt="source: https://xkcd.com/1053/" title="source: https://xkcd.com/1053/" /></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>Say thank you, and praise them</h1>
+    </section>
+
+    <section class="slide">
+      <h2>Thanks!</h2>
+      <ul>
+        <li><a href="https://twitter.com/mike_conley" target="_blank">@mike_conley</a></li>
+        <li><a href="https://www.mikeconley.ca" target="_blank">My blog</a></li>
+        <li><a href="https://github.com/mikeconley/" target="_blank">My GitHub</a></li>
+      </ul>
     </section>
 
     <!-- End slides. -->
@@ -125,7 +147,6 @@
 <script src="core/deck.core.js"></script>
 
 <!-- Extension JS files. Add or remove as needed. -->
-<script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
 <script src="extensions/menu/deck.menu.js"></script>
 <script src="extensions/goto/deck.goto.js"></script>
 <script src="extensions/status/deck.status.js"></script>
@@ -136,14 +157,6 @@
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
   $(function() {
-    $("#toggle-fullscreen").click(function() {
-      if (!document.mozFullScreenElement) {
-        document.documentElement.mozRequestFullScreen();
-      } else {
-        document.mozCancelFullScreen();
-      }
-    });
-
     $.deck('.slide');
   });
 
